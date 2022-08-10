@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #2F8294;
+    --cor2: #91ECFF;
+    --cor3: #69CCE0;
+    --cor4: #94663F;
+    --cor5: #DEBEA2;
+}
+
+@media screen and (min-width: 799px) {
+    main {
+        width: 800px;
+    }
+  }
+ 
+  @media Handheld {
+        body {
+            display: block;
+            
+        }
+        main {
+            padding-top: 35vh;
+            min-width: 300px;
+            max-width: 100vw;
+            padding-bottom: 30vh;
+        }
+        header {
+            width: 100vw;
+            position: fixed;
+            top:0;
+        }
+
+        menu {
+            position: fixed;
+            top: 219px;
+            display: inline-block;
+            font-size: 0.8em;
+            width: 100%;
+        }
+
+
+        footer {
+            width: 100vw;
+            position: fixed;
+            bottom:0;
+
+        }   
+  }
+
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 798px) {
+    main {
+        min-width: 450px;
+        max-width: 800px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    body {
+        display: block;
+        
+    }
+    main {
+        padding-top: 35vh;
+        min-width: 300px;
+        max-width: 100vw;
+        padding-bottom: 30vh;
+    }
+    header {
+        width: 100vw;
+        position: fixed;
+        top:0;
+    }
+
+    menu {
+        position: fixed;
+        top: 219px;
+        display: inline-block;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+
+    footer {
+        width: 100vw;
+        position: fixed;
+        bottom:0;
+
+    }
+
+  }
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: var(--cor3);
+    background-image: url('../imagens/fundotela.jpg');
+    background-position: center ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header{
+    height: 220px;
+    background-color: var(--cor1);
+    background-image: url('../imagens/logo5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
+}
+
+header > img {
+    max-width: 80%;
+    max-height: 80%;
+    
+}
+
+menu {
+    background-color: var(--cor1);
+    margin: auto;
+    box-shadow: 1px 14px 10px rgba(0, 0, 0, 0.158);
+}
+
+menu li {
+    display: inline-block;
+    padding: 6.1px;
+    
+}
+
+menu a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--cor2);
+    
+}
+
+menu a:hover, footer a:hover {
+    background-color: var(--cor2);
+    border-radius: 10px;
+    transition-duration: 0.6s;
+    color: var(--cor1);
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    height: 550px;
+    overflow-y: scroll;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.144);
+    color: black;
+    scrollbar-width: none;
+}
+
+main h1 {
+    padding: 20px;
+    font-size: 2.5em;
+}
+
+main h2 {
+    padding: 30px;
+}
+
+main p {
+    padding: 20px;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1.9vh;
+}
+
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+
+.email, .fone, .endereco {
+    text-decoration: none;
+}
+
+.fone:hover, .email:hover {
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.fone::before {
+    content: "\260E  ";
+}
+
+.email::before {
+    content: "\1F4E7  ";
+}
+
+.endereco::before {
+    content: "\1F3E2  ";
+}
+
+
+section.imagebox {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+section.imagebox img {
+    padding: 40px;
+    width: 150px;
+}
+
+section.contato {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+section.produtos {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+section.produtos img {
+    padding: 10px;
+    max-height: 180px;
+    max-width: 200px;
+}
+
+section.produtos figcaption {
+    text-align: center;
+    padding: 5px 1px;
+}
+
+figcaption:hover {
+    background-color: var(--cor2);
+    border-radius: 10px;
+    font-weight: bold;
+    transition-duration: 0.6s;
+}
+
+footer {
+    background-color: var(--cor1);
+    text-align: center;
+    color: var(--cor2);
+    border-radius: 0 0 10px 10px;
+    margin: auto;
+    box-shadow: 1px 14px 10px rgba(0, 0, 0, 0.151);
+    overflow: hidden;
+}
+footer p {
+    font-size: 1em;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor2);
+    padding: 10px;
+}
